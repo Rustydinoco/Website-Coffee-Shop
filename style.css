@@ -1,0 +1,79 @@
+:root{
+    --primary : rgb(229, 229, 203);
+    --secondary : rgb(213, 206, 163);
+    --bg : rgb(60, 42, 33);
+}
+
+*{
+    padding: 0;
+    margin : 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    
+}
+body{
+    background: var(--bg);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.navbar .logo{
+    color: var(--secondary);
+    font-size:1.7rem;
+    font-style: italic;
+}
+
+.navbar .logo span{
+    color: #fff;
+}
+
+.navbar .navbar-nav a{
+    color: #fff;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    
+}
+
+.navbar .navbar-extra a{
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 0.7rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--secondary);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--secondary) ;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+    
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--secondary);
+}
