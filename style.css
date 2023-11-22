@@ -12,6 +12,7 @@
     outline: none;
     border: none;
     text-decoration: none;
+    scroll-behavior: smooth;
     
 }
 body{
@@ -145,9 +146,42 @@ body{
     box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
 }
 
+/*about us section*/
 
+.about{
+    padding: 10rem 7% 1.5rem;
+    display: flex;
+}
 
+.about .about-img{
+    flex: 1 1 45rem;
+}
 
+.about .about-img img{
+    width: 100%;
+}
+
+.about .about-content{
+    flex: 1 1 45rem;
+}
+
+.about .about-content h2{
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin: 2.3rem 3rem 0.5rem;
+    letter-spacing: 0.3rem;
+    padding-bottom: 0.5rem;
+}
+
+.about .about-content h2 span {
+    color: var(--secondary); 
+}
+
+.about .about-content p{
+    margin: 1rem 3rem;
+    font-weight: 100;
+    font-size: 1rem;
+}
 
 @media (max-width : 1000px){
     html{
