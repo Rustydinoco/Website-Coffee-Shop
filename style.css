@@ -19,7 +19,7 @@ body{
     background: var(--bg);
     font-family: 'Poppins', sans-serif;
     color: #fff;
-    min-height: 2000px;
+    min-height: 5000px;
 }
 /*Navbar sectiom*/
 .navbar{
@@ -146,6 +146,11 @@ body{
     box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
 }
 
+.hero .content .cta:hover{
+    background: var(--secondary);
+    transition: 0.3s;
+}
+
 /*about us section*/
 
 .about{
@@ -159,6 +164,7 @@ body{
 
 .about .about-img img{
     width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .about .about-content{
@@ -182,6 +188,44 @@ body{
     font-weight: 100;
     font-size: 1rem;
 }
+
+.about2{
+    padding: 3rem 7% 1.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.about2 .about-img2{
+    flex: 1 1 45rem;
+}
+
+.about2 .about-img2 img{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.about2 .about-content2{
+    flex: 1 1 45rem;
+}
+
+.about2 .about-content2 h2{
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin: 2.3rem 3rem 0.5rem;
+    letter-spacing: 0.3rem;
+    padding-bottom: 0.5rem;
+}
+
+.about2 .about-content2 h2 span {
+    color: var(--secondary); 
+}
+
+.about2 .about-content2 p{
+    margin: 1rem 3rem;
+    font-weight: 100;
+    font-size: 1rem;
+}
+
 
 @media (max-width : 1000px){
     html{
@@ -225,6 +269,27 @@ body{
 
     .navbar .navbar-nav a:hover::after{
         transform: scaleX(0.2);
+    }
+
+    .about,.about2{
+        flex-wrap: wrap;
+        ;
+    }
+
+    .about .about-img img,.about2 .about-img2 img{
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .about .about-content h2,.about2 .about-content2 h2{
+        margin: 1.7rem 0 0.5rem;
+        font-size: 2.5rem;
+    }
+
+    .about .about-content p,.about2 .about-content2 p{
+        margin: 0.5rem 0;
+        font-size: 1rem;
     }
 }
 
