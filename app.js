@@ -19,11 +19,13 @@ const hm = document.querySelector('#hamburger')
 const sb = document.querySelector('#searchButton')
 
 document.addEventListener('click',(e)=>{
-    if(!hm.contains(e.target)&&!navbarNav.contains(e.target))
+    if(!hm.contains(e.target)&&!navbarNav.contains(e.target)){
     navbarNav.classList.remove('active')
+    }
+
+    if(!sb.contains(e.target)&&!searchForm.contains(e.target)){
+    searchForm.classList.remove('active')
+    }
+
 })
 
-// document.addEventListener('click',(e)=>{
-//     if(!sb.contains(e.target)&&!searchForm.contains(e.target))
-//     searchForm.classList.remove('active')
-// })
