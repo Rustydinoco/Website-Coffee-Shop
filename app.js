@@ -15,8 +15,16 @@ searchButton.addEventListener ('click',(e) => {
     e.preventDefault()
 })
 
+const shoppingCart = document.querySelector('.shopping-cart')
+const cartButton = document.querySelector('#cartButton')
+
+cartButton.addEventListener ('click',() => { 
+    shoppingCart.classList.toggle('active')
+})
+
 const hm = document.querySelector('#hamburger')
 const sb = document.querySelector('#searchButton')
+const cb = document.querySelector('#cartButton')
 
 document.addEventListener('click',(e)=>{
     if(!hm.contains(e.target)&&!navbarNav.contains(e.target)){
@@ -25,6 +33,10 @@ document.addEventListener('click',(e)=>{
 
     if(!sb.contains(e.target)&&!searchForm.contains(e.target)){
     searchForm.classList.remove('active')
+    }
+    
+    if(!cb.contains(e.target)&&!shoppingCart.contains(e.target)){
+    shoppingCart.classList.remove('active')
     }
 
 })

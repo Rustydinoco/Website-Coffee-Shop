@@ -126,9 +126,52 @@ body{
     cursor: pointer;
     margin-right: 1rem;
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.shopping-cart{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 35rem;
+    height: 100vh;
+    background-color: var(--primary);
+    transition: 0.4s;
+    padding: 1rem 1rem;
+    color: var(--bg);
+}
 
+.shopping-cart.active{
+    right: 0;
+}
+
+.shopping-cart .cart-item{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--bg);
+    position: relative;
+}
+
+.shopping-cart .cart-item img{
+    width: 70px;
+    height: 70px;
+}
+
+.shopping-cart .cart-profile h3{
+    font-size: 1.3rem;
+}
+
+.shopping-cart .cart-item i{
+    position: absolute;
+    right: 3rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
 
 /* Hero section*/
 .hero{
@@ -186,6 +229,7 @@ body{
 .hero .content .cta:hover{
     background: var(--secondary);
     transition: 0.3s;
+    color: var(--bg);
 }
 
 /*about us section*/
